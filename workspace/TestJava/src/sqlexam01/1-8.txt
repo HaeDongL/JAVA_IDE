@@ -1,0 +1,8 @@
+SELECT
+e.employee_id 사번, CONCAT(e.first_name,e.last_name) 이름
+FROM employees e, jobs j, job_history jh
+WHERE jh.job_id = j.job_id
+AND jh.employee_id = e.employee_id
+AND jh.job_id = 'AC_ACCOUNT';
+
+조인을 어떻게 하느냐에 따라 컬럼조립이 다르게 되어 결과가 다르게 나올 수 있다. 주의

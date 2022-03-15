@@ -1,0 +1,10 @@
+SELECT
+d.department_name, e.first_name, ve.ms
+FROM employees e, departments d, (SELECT
+								  d1.department_id ved, MAX(e1.salary) ms
+								  FROM departments d1, employees e1
+								  WHERE e1.department_id = d1.department_id
+								  GROUP BY d1.department_id) ve
+WHERE e.department_id = d.department_id
+AND d.department_id = ve.ved
+AND e.salary = ve.ms;

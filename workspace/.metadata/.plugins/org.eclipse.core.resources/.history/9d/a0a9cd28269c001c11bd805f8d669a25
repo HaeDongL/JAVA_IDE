@@ -1,0 +1,16 @@
+package t03_07;
+
+import java.util.Vector;
+
+public class FileUtil {
+
+		public static void fileToPrint(String fileName) throws Exception{
+			
+		}
+		//////////////////아래에 구현하세요.////////////////////
+
+		public static Vector<User> fileFindAddress(String fileName, String addresss){
+			
+		}
+		//////////////////아래에 구현하세요.////////////////////
+}

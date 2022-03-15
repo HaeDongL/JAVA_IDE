@@ -1,0 +1,36 @@
+package jdbcexam;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class EmpStatistics {
+
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void printStatistics(int maxSalary) throws SQLException{
+		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+		Connection con = DriverManager.getConnection(url,"scott","tiger");
+		System.out.println("===================================");
+		System.out.println("Max Salary : "+maxSalary);
+		System.out.println("===================================");
+		
+	}
+	
+	
+	public static void main(String[] args) throws Exception{
+		int maxSalary = 10000;
+		new EmpStatistics().printStatistics(maxSalary);
+		
+		maxSalary = 15000;
+		new EmpStatistics().printStatistics(maxSalary);
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package jp03.par04;
+
+public class BufferedReaderTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

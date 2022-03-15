@@ -1,0 +1,39 @@
+package t03_07;
+
+import java.util.Random;
+
+public class Prob02 {
+
+	private static int[] generateRandomNumber() {
+		
+		int[] randomIntArray = new int[10];
+		int random = 0;
+		Random rd = new Random();
+		
+		for(int i=0; i<randomIntArray.length;i++) {
+			random = rd.nextInt();
+			for(int j=0; j<randomIntArray.length; j++) {
+				if(random != randomIntArray[j] ) {
+					randomIntArray[i] = random;
+				}
+			}
+					
+		}
+		
+		return 0;
+		
+	}
+	
+	public static void printStatistics(int[] array) {
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		int[] array = generateRandomNumber();
+		Prob02.printStatistics(array);
+
+	}
+
+}

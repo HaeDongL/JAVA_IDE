@@ -1,0 +1,15 @@
+//=============================================//
+#QUERY :: SELECT : 기타 KEYWARD를 이용 검색, 조회
+//=============================================//
+1.KEYWORD :: || CONCATENATION(COLUMN 합성)
+
+//==> || 사용 	홍길동대리 형식검색
+SELECT
+name||title
+FROM emp_test;
+
+
+//==> || 사용 홍길동 대리 형식검색
+SELECT
+name||' '||title
+FROM emp_test; 

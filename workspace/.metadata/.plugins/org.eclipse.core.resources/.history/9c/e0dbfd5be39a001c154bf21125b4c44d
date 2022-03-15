@@ -1,0 +1,53 @@
+package t03_04;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.Vector;
+
+public class Prob3 {
+
+	
+	public Vector getList() throws Exception{
+		
+		BufferedReader br = new BufferedReader(new FileReader("list.txt"));
+		Vector vc = new Vector();
+		String read = "";
+		String returnRead = "";
+		String result = "";
+		String[] strSplit;
+		while(true) {
+			read = br.readLine();
+			if(read == null) {
+				break;
+			}
+			read = "["+read+"]";
+			strSplit = read.split("/");
+			if("java"==strSplit[1] || "JAVA"==strSplit[1]) {
+				if(Integer.parseInt(strSplit[2])>=80) {
+					result = "수료";
+				}else {
+					result = "미수료";
+				}
+			}
+			for(String rd : strSplit) {
+				returnRead += " "+rd;
+			}
+			returnRead += result;
+			vc.add(returnRead);
+		}
+		return vc;
+}
+	
+	
+	public static void main(String[] args) throws Exception {
+		
+		Prob3 e = new Prob3();
+		
+		Vector scores = e.getList();
+		for(int i=0; i<scores.size(); i++) {
+			System.out.println(scores.get(i));
+		}
+		
+	}
+
+}

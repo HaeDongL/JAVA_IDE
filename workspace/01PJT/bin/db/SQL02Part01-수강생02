@@ -1,0 +1,164 @@
+//=============================================//
+4.WHERE 조건절 :: SQL연산자 IN(일치하는것, 일치하는것,...)
+
+//==> 관리부와 영업부 이름,부서 조회
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE dept_name IN('관리부','영업부')
+ORDER BY dept_name;
+
+==> 아래 비교
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE dept_name = '관리부' OR dept_name = '영업부'
+ORDER BY dept_name;
+
+//==> 관리부와 영업부 제외 이름,부서 조회
+
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE dept_name NOT IN('관리부','영업부')
+ORDER BY dept_name;
+
+
+//=============================================//
+5.WHERE 조건절::SQL연산자 LIKE
+
+//==> _ => 하나		% => 다중
+
+//==> 김씨성을 갖는 이름, 부서 조회
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE name LIKE '김%';
+
+//==>김씨성을 갖고 이름이 1자인 이름, 부서 조회
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE name LIKE '김_';
+
+//==>김씨성을 갖고 있는 이름이 2자인 이름, 부서 조회
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE name LIKE '김__';
+
+//==> 이름이 3자중 2번째 자가'길 이름,부서 조회
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE name LISK '_길_';
+
+//=============================================//
+6.WHERE 조건절:: SQL연산자 LIKE 및 기타 KEYWORD
+
+//==> 조회 할 문자중 %,_가 사용된 경우 %,_를 검색하려면
+INSERT INTO emp_tset(name,title) VALUES('박_%','특수%');
+INSERT INTO emp_tset(name,title) VALUES('김_%','특수%');
+COMMIT;
+
+//==> '김_%'와 '박_%'를 모두 조회 의미이나???
+SELECT
+*
+FROM emp_test
+WHERE name LIKE'__%';
+
+//==> KEYWORD EXCAPE 옵션사용
+SELECT
+*
+FROM emp_test
+WHERE name LIKE '_\_\%' ESCAPE'\';
+
+SELECT
+*
+FROM emp_test
+WHERE name LIKE '_?_?%' ESCAPE'?';
+
+
+//=============================================//
+6.WHERE 조건절 :: SQL연산자 기타 KEYWORD
+
+SELECT
+name 이름, in_date 입사일
+FROM emp_test
+WHERE in_date LIKE '%01';
+
+SELECT
+name 이름, in_date 입사일
+FROM emp_test
+WHERE in_date LIKE '04%';
+
+
+SELECT
+name 이름, in_date 입사일
+FROM emp_test
+WHERE in_date LIKE '%0%';
+
+//==> ALL:모두 만족해야하며,
+//==> ANY:한쪽만 만족해야 한다.
+
+SELECT
+name 이름, salary 월급
+FROM emp_test
+WHERE salary > ALL(2500,5000); ==> 최대값의 의미!!!
+
+
+SELECT
+name 이름, salary 월급
+FROM emp_test
+WHERE salary > ANY(2500,5000); ==> 최소값의 의미!!!
+
+SELECT
+name 이름, salary 월급
+FROM emp_test
+WHERE salary NOT IN(3333,4444);
+
+SELECT
+name 이름, salary 월급
+FROM emp_test
+WHERE salary <> ALL(3333,4444); ==> <> != 의미
+
+
+SELECT
+name 이름, salary 월급
+FROM emp_test
+WHERE salary != ANY(3333,4444);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

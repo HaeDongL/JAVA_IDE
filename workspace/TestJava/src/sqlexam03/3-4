@@ -1,0 +1,6 @@
+SELECT
+e.first_name, e.last_name, e.salary
+FROM employees e, jobs j
+WHERE e.job_id = j.job_id
+AND e.salary BETWEEN 9000 AND 10000
+AND j.job_title = 'Sales Representative';

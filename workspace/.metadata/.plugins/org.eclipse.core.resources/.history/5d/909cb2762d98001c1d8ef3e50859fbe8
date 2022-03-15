@@ -1,0 +1,10 @@
+package jp04.part01;
+
+public class PriorityThread {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

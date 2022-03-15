@@ -1,0 +1,10 @@
+package t02_28;
+
+public class Prob20 {
+
+	public static void main(String[] args) {
+		String str = "PROD-001#X-note#Smasung#3#6000000";
+
+	}
+
+}

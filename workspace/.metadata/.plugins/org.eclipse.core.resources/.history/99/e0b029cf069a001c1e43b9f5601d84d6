@@ -1,0 +1,16 @@
+//=============================================//
+3.KEYWORD :: NULLS FIRST / NULLS LAST
+
+SELECT
+name ÀÌ¸§, salary*12 ¿¬ºÀ
+FROM emp_test
+ORDER BY salary*12 ASC NULLS FIRST;
+
+SELECT
+name ÀÌ¸§, salary*12 ¿¬ºÀ
+FROM emp_test
+ORDER BY salary*12 DESC NULLS LAST;
+
+
+//=============================================//
+//==> ORDER BY expr | column | ALIAS | column index »ç¿ë

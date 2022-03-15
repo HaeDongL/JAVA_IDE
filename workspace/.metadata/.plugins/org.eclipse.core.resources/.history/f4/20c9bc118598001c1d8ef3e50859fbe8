@@ -1,0 +1,36 @@
+package t03_02;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class FileController {
+
+	public void reverseLine(String oldf, String newf)throws Exception{
+		
+		BufferedReader br = new BufferedReader(new FileReader(oldf));
+		BufferedWriter bw = new BufferedWriter(new FileWriter(newf));
+		while(true) {
+			bw.write(br.readLine());
+			bw.newLine();
+			bw.flush();
+			if(br.readLine() == null) {
+				break;
+			}
+			
+		}
+		
+		//resverLine ¸Þ¼Òµå
+	}
+	
+	
+	public static void main(String[] args)throws Exception  {
+		
+		FileController c = new FileController();
+		String oldf = "./files/oldf.text";
+		String newf = "./files/newf.text";
+		c.reverseLine(oldf,newf);
+	}
+
+}

@@ -1,0 +1,16 @@
+package jp03.par07;
+
+import java.io.*;
+
+/*
+ * FileName : FileInfo.java
+ */
+
+public class FileInfo {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

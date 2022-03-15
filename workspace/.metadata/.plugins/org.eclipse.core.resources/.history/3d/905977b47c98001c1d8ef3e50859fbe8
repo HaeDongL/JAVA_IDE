@@ -1,0 +1,11 @@
+package t03_02;
+
+public class Prob23 {
+
+	public static void main(String[] args) {
+		
+		String url1 = "http://localhost/order?prodld=PROD-001&prodName=°¶·°½Ã3&price=980000";
+
+	}
+
+}

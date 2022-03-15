@@ -1,0 +1,31 @@
+//=============================================//
+1.DML::INSERT:TABLE RECORD 입력
+//=> DATE 표현 형식을 CECK
+SELECT SYSDATE FROM DUAL;
+(설정상태 : YEAR/MONTH/DATE 확인)
+
+//=============================================//
+//==>DUAL: 출력을 위한 가상(?) TABLE
+SELECT 9*9 FROM DUAL;
+SELECT USER FROM DUAL;
+
+//=============================================//
+//==>TABLE 모든 COLUMN VALUE 입력
+INSERT
+INTO emp_test (id,name,salary,table,in,data,dept_name)
+VALUES(1,'김사장',100,'사장','04-07-19','개발부);
+
+SELECT*FROM EMP_TEST;
+
+//=============================================//
+//==> TABLE 모든 COLUMN에 VALUE입력 경우
+INSERT
+INTO emp_test
+VALUES(2,'홍길동',1000,'부사장','2004/07/19','영업부);
+
+
+//=============================================//
+//=> TABLE 일부 COLUMN VALUE 입력
+INSERT
+INTO emp_test(id,name,salary)
+VALUES(3,'홍길순',10000);

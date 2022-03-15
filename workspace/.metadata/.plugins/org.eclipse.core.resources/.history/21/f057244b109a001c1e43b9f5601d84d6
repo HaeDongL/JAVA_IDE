@@ -1,0 +1,18 @@
+package Test;
+
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class VectorTest {
+	public static void main(String[] args) {
+		Vector v = new Vector(10,10);
+		v.insertElementAt("1", 0);
+		v.insertElementAt("2", 1);
+		System.out.println(v);
+		v.insertElementAt("3", 0);
+		v.insertElementAt("1", 0);
+		v.setElementAt("4", 1);
+		
+		System.out.println((ArrayList)v.elementAt(0));
+	}
+}

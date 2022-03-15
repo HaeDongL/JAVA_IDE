@@ -1,0 +1,16 @@
+package jp03.par01;
+
+/*
+ * FileName : InputTest.java
+ * 
+ * 1.java.io package: 프로그램 외부로 자원을 받거나(?), 전달(?)경우에 사용
+ * 2.keyboard로 부터 data를 읽어 들이면...
+ */
+
+
+
+public class InputTest {
+	public static void main(String[] args) {
+		
+	}
+}

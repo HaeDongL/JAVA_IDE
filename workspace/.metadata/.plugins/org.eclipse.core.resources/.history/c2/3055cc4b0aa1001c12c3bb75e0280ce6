@@ -1,0 +1,42 @@
+package jdbcexam;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class EmpManager04 {
+	
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void printEmployee(String[] jobs) throws SQLException {
+		String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
+		Connection conn = DriverManager.getConnection(dburl,"hr","hr");
+		Statement stmt = null;
+		ResultSet res = null;
+		String sql = "SELECT\r\n"
+				+ "e.employee_id, e.first_name, e.salary\r\n"
+				+ "FROM employees e, jobs j\r\n"
+				+ "WHERE j.job_title IN('"+jobs[0]+"','"+jobs[1]+"') "
+				+ "ORDER BY e.employee_id";
+		stmt = conn.createStatement();
+		res = stmt.executeQuery(sql);
+		while(res.next()) {
+			System.out.println(res.getInt("employee_id")+" "+res.getString("first_name")+" "+res.getInt("Salary"));
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) throws SQLException{
+		String[] jobs = {"Accountant","Stock Clerk"};
+		new EmpManager04().printEmployee(jobs);
+	}
+}

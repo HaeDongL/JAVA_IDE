@@ -1,0 +1,7 @@
+SELECT
+d.department_name NAME, j.min_salary minsal, j.max_salary maxsal, AVG(e.salary) avgsal
+FROM employees e, departments d, jobs j
+WHERE e.department_id = d.department_id
+AND e.job_id = j.job_id
+GROUP BY d.department_name,j.min_salary,j.max_salary
+ORGER BY d.department_name;

@@ -1,0 +1,24 @@
+//=============================================//
+#FUNCTION => 내부적으로 공제되는 함수
+	::SINGLE ROW FUNCTION		=> 1개의 recored에서 사용 단일행함수
+	::MULTI ROW FUNCTION		=> 여러개의 recored에서 사용 다중행 함수
+	
+//=============================================//
+1.단일행 함수 :: 문자 함수 CONCAT/SUBSTR/LENGTH
+
+//==>CONCAT(문자,문자) => || 비교 이해
+SELECT
+name || '님의 월급은' || salary || '원'"사원월급"
+FROM emp_test'
+
+//==> 위와 비교
+SELECT
+CONCAT(CONCAT(name,'님의 월급은'), CONCAT(salary,'원'))"사원월급"
+FROM emp_test;
+
+//==>SUBSTR(문자, 시작위치, 잘라낼갯수)
+//==> 2001년도에 입사지 이름, 입사년 조회
+SLEECT
+name 이름, in_date 입사년도
+FROM emp_test
+WHERE in_date LIKE '01%';

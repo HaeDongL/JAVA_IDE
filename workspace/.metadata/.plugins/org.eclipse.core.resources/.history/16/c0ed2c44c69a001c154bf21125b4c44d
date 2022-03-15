@@ -1,0 +1,29 @@
+package t03_04;
+
+
+
+class Score {
+	///Field
+	private String name;
+	private int kor;
+	private int eng;
+	private int math;
+	private int sum;
+	///Constructor
+	public Score(String name, int kor, int eng, int math, int sum) {
+		super();
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+		this.sum = sum;
+	}
+	
+	
+}
+
+public class Prob2 {
+	public static void main(String[] args) {
+	
+	}
+}

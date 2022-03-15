@@ -1,0 +1,13 @@
+package t03_07;
+
+public class User {
+	///Field
+	private String name;
+	private String address;
+	private String cellularNumber;
+	private boolean male;
+	///Constructor
+	
+	//Method
+	
+}

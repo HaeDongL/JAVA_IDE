@@ -1,0 +1,20 @@
+//=============================================//
+3.KEYWORD :: NULLS FIRST / NULLS LAST
+
+SELECT
+name 이름, salary*12 연봉
+FROM emp_test
+ORDER BY salary*12 ASC NULLS FIRST;
+
+SELECT
+name 이름, salary*12 연봉
+FROM emp_test
+ORDER BY salary*12 DESC NULLS LAST;
+
+
+//=============================================//
+//==> ORDER BY expr | column | ALIAS | column index 사용
+SELECT
+name 이름, salary*12 연봉
+FROM emp_test
+ORDER BY salary*12

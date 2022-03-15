@@ -1,0 +1,10 @@
+package t03_03;
+
+public class Grade {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package t02_25;
+
+public class ArrayUtil {
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		ArrayUtil au = new ArrayUtil();
+		
+		char[] s = {'J','a','v','a','P','r','o','g','r','a','m');
+		
+	}
+	
+}

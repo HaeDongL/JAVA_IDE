@@ -1,0 +1,15 @@
+SELECT
+e.employee_id,d.department_id,e.salary,TRUNC(ve.va,0) AVG_salary
+FROM employees e, departments d,(SELECT
+								d1.department_id vdi,AVG(e1.salary) va
+								FROM employees e1, departments d1
+								WHERE e1.department_id = d1.department_id
+								GROUP BY d1.department_id) ve
+WHERE e.department_id = d.department_id
+AND d.department_id = ve.vdi
+AND e.salary > ve.va;
+		  	
+
+/// 테이블을 두개 씩 조인해서 가상 테이블을 두 개 만든뒤 하나는 원본 비교 하고 하나는 평균 비교 할때 사용
+
+

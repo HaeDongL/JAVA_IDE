@@ -1,0 +1,20 @@
+package t03_07;
+
+import java.util.Scanner;
+
+public class Prob04 {
+	public static void main(String[] args) {
+		String stdNum = "";
+		int kor = 0;
+		int math = 0;
+		int eng = 0;
+		int java = 0;
+		int sum = 0;
+		double avg = 0;
+		
+		Scanner keyBoard = new Scanner(System.in);
+		
+		System.out.print("학번을 입력하세요 ");
+		
+	}
+}

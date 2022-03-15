@@ -1,0 +1,19 @@
+SELECT
+e.employee_id 직원아이디, e.first_name 이름, MAX(e.salary), ve.savg
+FROM employees e, departments d, 
+				(SELECT
+				 d1.department_id did, AVG(e1.salary) savg
+				 FROM employees e1, departments d1
+				 WHERE e1.department_id = d1.department_id
+				 GROUP BY d1.department_id) ve,
+				 (SELECT
+				 d2.department_id did2, MAX(e2.salary)
+				 FROM employees e2, departments d2
+				 WHERE e2.department_id = d2.department_id
+				 GROUP BY d1.department_id) ve2
+WHERE e.department_id = d.department_id
+AND d.department_id = ve.did
+GROUP BY e.employee_id,e.first_name,ve.savg;
+
+
+				 

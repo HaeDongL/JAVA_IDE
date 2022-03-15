@@ -1,0 +1,11 @@
+package servlet;
+
+/*
+ * FileName : UserVO.java
+ * 1.Client Data 를 Object Modeling
+ * 2.Value Object (Value Object Pattern) : Data를 갖는 객체
+ */
+
+public class UserVO {
+	
+}

@@ -1,0 +1,32 @@
+package servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/*
+ * FileName : LoginBeanSource.java
+ * ::Connecton Pool 을 이용한 SPEC화 한 javax.sql.DataSource사용
+ */
+
+//@WebServlet("/LoginBeanDataSource")
+
+public class LoginBeanDataSource extends HttpServlet{
+	
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException,
+	IOException{
+		
+		req.setCharacterEncoding("EUC_KR");
+		res.setContentType("text/http;charset=EUC_KR");
+		PrintWriter out = res.getWriter();
+		
+		//Client Form Data 처리
+		String id = req.getParameter("id");
+		String pwd = req.getParameter("pwd");
+	}
+
+}

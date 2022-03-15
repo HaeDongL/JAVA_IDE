@@ -1,0 +1,30 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//package jw04;
+/*
+ * FileName: LoginBeanVODao/java
+ */
+
+//@Webservlet("LoginBeanVODao")
+public class LoginBeanVODao extends HttpServlet{
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException,IOException{
+		req.setCharacterEncoding("EUC_KR");
+		res.setContentType("text/html;EUC_KR");
+		PrintWriter out = res.getWriter();
+		
+		//Client Form Data 贸府
+		String id = req.getParameter("id");
+		String pwd = req.getParameter("pwd");
+		
+		//UserVO instance 积己 棺 Client Form Data 傈崔(Binding)
+		UserVO userVO = new SuerVO();
+		
+	}
+	
+}

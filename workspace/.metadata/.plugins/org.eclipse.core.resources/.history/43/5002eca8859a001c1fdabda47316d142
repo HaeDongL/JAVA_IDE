@@ -1,0 +1,57 @@
+//=============================================//
+#QUERY :: SELECT : WHERE 조건절 연산자 학습
+//=============================================//
+1.WHERE 조건절 :: 연산자
+
+//==> 월급 5000 이상 이름, 월급, 입사일 조회
+SELECT
+name 이름, salary 월급, in_date 입사일
+FROM emp_test
+WHERE salary >= 5000
+ORDER BY salary;
+
+//==> 2004-01-01이후 입사자 이름, 월급, 입사일 조회
+SELECT
+name 이름, salary 월급, in_date 입사일
+FROM emp_test
+WHERE in date >= '2004-01-01'
+ORDER BY int_data;
+
+//==> 이름 이순신666 이상(?) 이름, 월급, 입사일 조회
+SELECT
+name 이름, salary 월급, in_date 입사일
+FROM emp_test
+WHERE in name >= '이순신666'
+ORDER BY name;
+
+==>위의 이해를 돕기위해 아래를 확인
+SELECT name FROM emp_test ORDER BY name;
+
+
+//=============================================//
+
+2.WHERE 조건절::연산자, 논리연산자(NOT,AND,OR)
+
+//==>2004-01-01이후 입사자 이며 월급이 5000이상 이름, 월급, 입사일 조회
+SELECT
+name 이름, salary 울급, in_date 입사일
+FROM emp_test
+WHERE in_date > '2004-01-01; AND salary >= 5000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

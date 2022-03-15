@@ -1,0 +1,97 @@
+package t02_28;
+
+class CellPhone{
+	
+	///Field
+	private String phoneNumber; // 전화번호
+	private int totalCallTime; // 총 전화통화 시간
+	private int totalFee; // 총 요금
+	private int feePerCallTime; // 시간당 요금
+	
+	
+	///Constructor
+	
+	public CellPhone() {
+		
+	}
+	
+	public CellPhone(String phoneNumber, int feePerCallTime) {
+		this.phoneNumber = phoneNumber;
+		this.feePerCallTime = feePerCallTime;
+	}
+	
+	///Method
+	
+	public void call(String number, int time) {
+		this.totalCallTime += time;
+		System.out.println(number+"번호로 "+time+" 통화함.");
+	}
+	
+	public void calculationTotalFee() {
+		this.totalFee = this.feePerCallTime * this.totalCallTime;
+	}
+	
+	
+	
+	//getMethod
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public int getTotalCallTime() {
+		return totalCallTime;
+	}
+	public int getTotalFee() {
+		return totalFee;
+	}
+	public int getFeePerCallTime() {
+		return feePerCallTime;
+	}
+	
+	//setMethod
+	
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public void setTotalCallTime(int totalCallTime) {
+		this.totalCallTime = totalCallTime;
+	}
+	public void setTotalFee(int totalFee) {
+		this.totalFee = totalFee;
+	}
+	public void setFeePerCallTime(int feePerCallTime) {
+		this.feePerCallTime = feePerCallTime;
+	}
+	
+	
+}
+
+class SmartPhone extends CellPhone{
+	///Field
+	private boolean isMonthlyFixedRate; // 요금제 유무
+	private String monthlyFixedFee; // 월정액 요금
+	///Constructor
+	public SmartPhone(){
+		
+	}
+	public SmartPhone(String phoneNumber,int feePerCallTime) {
+		super(phoneNumber, feePerCallTime);
+		
+	}
+	///Method
+	
+	
+}
+
+
+
+
+
+public class Prob19 {
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

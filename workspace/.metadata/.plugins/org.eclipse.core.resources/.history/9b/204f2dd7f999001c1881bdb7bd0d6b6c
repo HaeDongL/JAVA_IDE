@@ -1,0 +1,29 @@
+package t03_03;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class FileCalculator {
+
+	public void addCalculateResult(String inputFileName) throws Exception {
+		BufferedReader br = new BufferedReader(new FileReader(inputFileName));
+		BufferedWriter wr = new BufferedWriter(new FileWriter(inputFileName));
+		String read = "";
+		int sum = 0;
+		while(true) {
+			read = br.readLine();
+			
+			
+		}
+		
+	}
+	
+	public static void main(String[] args) throws Exception {
+		FileCalculator fc = new FileCalculator();
+		fc.addCalculateResult("D://test.dat");
+
+	}
+
+}

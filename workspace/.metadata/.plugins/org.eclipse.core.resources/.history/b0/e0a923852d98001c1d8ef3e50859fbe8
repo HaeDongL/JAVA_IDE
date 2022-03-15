@@ -1,0 +1,18 @@
+package jp04.part01;
+
+
+/*
+ * FileName : PriThread.java
+ * 
+ * ::Thread 우선 순위 제어
+ * 
+ */
+
+public class PriorityThread {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

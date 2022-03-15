@@ -1,0 +1,21 @@
+package jp03.par06;
+
+import java.io.*;
+
+/*
+ * FileName: ReadObjectFile.java
+ * o ObjectInputStream을 Persistence data (file)에 저장된
+ * 	 회원정보를 갖는 UserVO instance륽(객체는 상태를 잦는다/상태정보를)읽어온다.
+ * 
+ * 
+ */
+
+
+public class ReadObjectFile {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

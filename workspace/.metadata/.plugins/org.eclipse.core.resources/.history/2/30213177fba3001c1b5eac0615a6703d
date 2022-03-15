@@ -1,0 +1,9 @@
+package servlet;
+
+	/*
+	 * FileName : DbBean.java
+	 */
+public class DbBean {
+	//Field
+	private String dbulr = "jdbc:oracle:thin:@"
+}

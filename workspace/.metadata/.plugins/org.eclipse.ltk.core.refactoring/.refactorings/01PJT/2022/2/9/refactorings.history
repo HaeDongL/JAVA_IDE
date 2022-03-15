@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;jp03.par06.UserVo.java&apos; to &apos;UserVO.java&apos;&#x0D;&#x0A;- Original project: &apos;01PJT&apos;&#x0D;&#x0A;- Original element: &apos;jp03.par06.UserVo.java&apos;&#x0D;&#x0A;- Renamed element: &apos;jp03.par06.UserVO.java&apos;" description="Rename compilation unit &apos;UserVo.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;jp03.par06{UserVo.java" name="UserVO.java" references="false" stamp="1645747483910" version="1.0"/>
+</session>

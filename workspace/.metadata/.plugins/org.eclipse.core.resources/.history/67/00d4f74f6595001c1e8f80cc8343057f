@@ -1,0 +1,41 @@
+package jp03.par05;
+
+import java.io.*;
+
+/*
+ * FileName: FileWriterTestFilter01.java
+ * 
+ * ==>FileCopy하는 Application 작성
+ * 1.Keyboard로 FileName을 입력
+ * 2.File의 내용을 read() ==> FileReader
+ * 3.File로 내용을 write()==>FileWriter
+ */
+
+public class FileWriterTestFilter01 {
+	//main method
+	public static void main(String[] args) throws IOException {
+		//필요객체 Stream/String 인스턴스 declaration
+		BufferedReader br = null;
+		BufferedWriter bw = null;
+		String fileName = "";
+		String copyFileName = "";
+		
+
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

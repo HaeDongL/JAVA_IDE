@@ -1,0 +1,29 @@
+package jdbcexam;
+
+import java.sql.SQLException;
+
+public class EmpStatistics {
+
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void printStatistics(int maxSalary) throws SQLException{
+		
+	}
+	
+	
+	public static void main(String[] args) throws Exception{
+		int maxSalary = 10000;
+		new EmpStatistics().printStatistics(maxSalary);
+		
+		maxSalary = 15000;
+		new EmpStatistics().printStatistics(maxSalary);
+
+	}
+
+}

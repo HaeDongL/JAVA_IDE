@@ -1,0 +1,23 @@
+김철수 : 70 80 90
+이영희 : 50 18 90
+홍길동 : 100 80 30
+임꺽정 : 30 60 20
+일지매 : 60 70 80
+장보고 : 10 100 100
+
+
+strTemp = read.replace("/", " ");
+			strTemp.replaceFirst(" ", ":");
+			for(int i=0; i<strTemp.length(); i++) {
+				if(strTemp.charAt(i) >= '0' && strTemp.charAt(i) <= '9') {
+						strTemp2 += strTemp.charAt(i);
+					}else if((strTemp2.length()>=2 || strTemp2.length()>=3) && 
+							strTemp.charAt(i) == ' ') {
+						sum += Integer.parseInt(strTemp2);
+						strTemp2 ="";
+					}
+				}
+			strTemp += " "+Integer.toString(sum);
+			sum = 0;
+			vc.add(strTemp);
+			System.out.println(vc);

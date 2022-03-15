@@ -1,0 +1,12 @@
+package t03_03;
+
+public class Grade {
+
+	public static void main(String[] args) {
+		Grade grade = new Grade();
+		String fileName = "score.txt";
+		grade.printGrade(fileName);
+
+	}
+
+}

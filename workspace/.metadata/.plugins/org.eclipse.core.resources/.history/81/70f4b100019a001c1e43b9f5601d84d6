@@ -1,0 +1,19 @@
+package t03_03;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class Grade {
+
+		public void printGrade(String fileName)throws Exception{
+			BufferedReader br = new BufferedReader(new FileReader(fileName));
+		}
+	
+	public static void main(String[] args) {
+		Grade grade = new Grade();
+		String fileName = "score.txt";
+		grade.printGrade(fileName);
+
+	}
+
+}

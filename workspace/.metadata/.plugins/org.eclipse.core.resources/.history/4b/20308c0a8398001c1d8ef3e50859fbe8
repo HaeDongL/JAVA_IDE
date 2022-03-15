@@ -1,0 +1,13 @@
+package t03_02;
+
+public class FileController {
+
+	public static void main(String[] args) {
+		
+		FileController c = new FileController();
+		String oldf = "files/oldf.text";
+		String newf = "files/newf.text";
+		c.reverseLine(oldf,newf);
+	}
+
+}

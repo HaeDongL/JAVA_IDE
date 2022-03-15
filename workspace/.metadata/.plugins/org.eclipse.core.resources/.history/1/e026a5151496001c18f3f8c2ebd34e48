@@ -1,0 +1,38 @@
+package t02_28;
+
+class CellPhone{
+	///Field
+	private String phoneNumber;
+	private int totalCallTime;
+	private int totalFee;
+	private int feePerCallTime;
+	
+	///Constructor
+	
+	///Method
+	
+	
+}
+
+class SmartPhone extends CellPhone{
+	///Field
+	private String isMonthlyFixedRate;
+	private String monthlyFixedFee;
+	///Constructor
+	
+	///Method
+}
+
+
+
+
+
+public class Prob19 {
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

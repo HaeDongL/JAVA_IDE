@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="EUC-KR">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="membertitle">
+        <h2>개인정보</h2>
+        <p>도움말</p>
+    </div>
+    <br />
+    <div class="member__table">
+        <form method="Post" action="HtmlServlet">
+            <table class="tablesheet">
+                <tr>
+                    <td class="title">이름(한글실명)</td>
+                    <td colspan="4"><input type="text"  name="name" /></td>
+                </tr>
+
+                <tr>
+                    <td class="title">성별</td>
+                    <td colspan="4">남자 :<input type="radio" class="gender" checked="true" name="gender" value="male" /> 
+                        여자 :<input type="radio" class="gender" name="gender" value="female" /></td>
+                </tr>
+                <tr>
+                    <td class="title">생년월일</td>
+                    <td colspan="4"><input type="text" class="table__number"  name="year"/>년
+                        <select class="bmonth" name="month" >
+                            <option>선택</option>                    
+                            <script>
+                                for(i=1; i<13; i++){
+                                    document.write("<option value="+i+">"+i+"</option>");
+                                }
+                            </script>
+                        </select>월 
+                        <select class="bday" name="day">
+                            <option>선택</option>
+                            <script>
+                                for(i=1; i<32; i++){
+                                    document.write("<option value="+i+">"+i+"</option>");
+                                }
+                            </script>
+                        </select>일
+                        <input type="radio" checked="true" />양력 <input type="radio" />음력 (<input type="radio" />윤달)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">최종학력</td>
+                    <td colspan="4">
+                        <select class="text_select">
+                            <option >선택하세요</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title">직업</td>
+                    <td>
+                        <select class="text_select" name="jobs">
+                            <option >선택하세요</option>
+                            <option value="학생">학생</option>
+                            <option value="직장인">직장인</option>
+                        </select>
+                    </td>
+                    <td class="title">소속</td>
+                    <td colspan="2"><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td class="title">결혼여부</td>
+                    <td><input type="radio" checked="true" />미혼 <input type="radio" />기혼</td>
+                    <td class="title">자녀수</td>
+                    <td colspan="2">
+                        <select>
+                            <option>선택</option>
+                        </select>
+                        명</td>
+                </tr>
+                <tr aria-rowspan="4">
+                    <th rowspan="3" class="title">연락처</th>            
+                    <td colspan="4" >전화번호 
+                        <input type="text" class="table__number" />-<input type="text" class="table__number" />-<input type="text" class="table__number" /> 
+                        <input type="radio" checked="true" />집 <input type="radio" />직장</td>
+                </tr>
+                <tr>
+                    <td colspan="4">휴대폰 
+                        <input type="text" class="table__number"  name="phone01"/>-<input type="text" class="table__number" name="phone02" />-<input type="text" class="table__number" name="phone03" />
+                    <input type="radio" />SKT <input type="radio" />KT <input type="radio" />LGT</td>
+                </tr>
+                <tr>
+                    <td colspan="4">전화번호나 휴대폰번호 2가지 중 하나는 반드시 입력하셔야 합니다.</td>
+                </tr>
+                <tr aria-colspan="2">
+                    <td class="title">거주지 주소</td>
+                    <td colspan="4"><input type="button" value="국내" /><input type="button" value="국외" /><input type="text" name="adress"></td>
+                </tr>        
+            </table>
+
+            <div>
+                <input type="submit" value="전송">
+                <input type="reset" value="취소">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function bMonth(){   
+        console.log(1) 
+    for(i=1; i<13; i++){
+        document.querySelector("bmonth").innerHTML=i;
+    }
+}
+</script>

@@ -1,0 +1,5 @@
+SELECT
+d.department_name 부서명, e.first_name 직원명, e.salary 급여, e.commission_pct 커미션
+FROM employees e, departments d
+WHERE e.department_id = d.department_id
+AND rownum <= 4;

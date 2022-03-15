@@ -1,0 +1,87 @@
+package t02_28;
+
+class CellPhone{
+	
+	///Field
+	private String phoneNumber; // 전화번호
+	private int totalCallTime; // 총 전화통화 시간
+	private int totalFee; // 총 요금
+	private int feePerCallTime; // 시간당 요금
+	
+	
+	///Constructor
+	
+	public CellPhone() {
+		
+	}
+	
+	public CellPhone(String phoneNumber, int feePerCallTime) {
+		this.phoneNumber = phoneNumber;
+		this.feePerCallTime = feePerCallTime;
+	}
+	
+	///Method
+	
+	public void call(String number, int time) {
+		this.totalCallTime += time;
+		System.out.println();
+	}
+	
+	
+	
+	//getMethod
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public int getTotalCallTime() {
+		return totalCallTime;
+	}
+	public int getTotalFee() {
+		return totalFee;
+	}
+	public int getFeePerCallTime() {
+		return feePerCallTime;
+	}
+	
+	//setMethod
+	
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public void setTotalCallTime(int totalCallTime) {
+		this.totalCallTime = totalCallTime;
+	}
+	public void setTotalFee(int totalFee) {
+		this.totalFee = totalFee;
+	}
+	public void setFeePerCallTime(int feePerCallTime) {
+		this.feePerCallTime = feePerCallTime;
+	}
+	
+	
+}
+
+class SmartPhone extends CellPhone{
+	///Field
+	private String isMonthlyFixedRate;
+	private String monthlyFixedFee;
+	///Constructor
+	
+	///Method
+	
+	
+}
+
+
+
+
+
+public class Prob19 {
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,5 @@
+SELECT
+d.department_name 부서명, MAX(e.salary) 최대급여, MIN(e.salary) 최소급여, AVG(e.salary) 평균급여
+FROM employees e, departments d
+WHERE e.department_id = department_id
+GROUP BY d.department_name;

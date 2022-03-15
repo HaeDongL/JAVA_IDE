@@ -1,0 +1,12 @@
+package servlet;
+
+
+
+import javax.servlet.http.*;
+
+public class HtemlServlet extends HttpServlet{
+	public void doPost(HttpServletRequest req, HttpServletResponse res) {
+		
+	}
+	
+}

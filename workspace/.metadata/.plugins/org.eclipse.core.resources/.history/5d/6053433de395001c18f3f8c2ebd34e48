@@ -1,0 +1,12 @@
+package jp03.par07;
+
+import java.io.*;
+
+public class FileInfo {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

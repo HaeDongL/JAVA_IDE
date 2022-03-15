@@ -1,0 +1,60 @@
+//=============================================//
+3.KEYWORD :: NULLS FIRST / NULLS LAST
+
+SELECT
+name 이름, salary*12 연봉
+FROM emp_test
+ORDER BY salary*12 ASC NULLS FIRST;
+
+SELECT
+name 이름, salary*12 연봉
+FROM emp_test
+ORDER BY salary*12 DESC NULLS LAST;
+
+
+//=============================================//
+//==> ORDER BY expr | column | ALIAS | column index 사용
+SELECT
+name 이름, salary*12 연봉
+FROM emp_test
+ORDER BY salary*12;
+
+SELECT
+name 이름, salary*12 연봉
+FROM emp_test
+ORDER BY salary;
+
+SELECT
+name 이름, salary*12 연봉
+FROM emp_test
+ORDER BY 연봉;
+
+SELECT
+name 이름, salary*12 연봉
+FROM emp_test
+ORDER BY 2;
+
+////////////////////////////////////////////////////////
+//==>아래의 2 QUERY 결과 확인
+SELECT
+name 이름, salary*12 연봉, dept_name 부서
+FROM emp_test
+ORDER BY dept_name;
+
+SELECT
+name 이름, salary*12 연봉
+FROM emp_test
+ORDER BY dept_name
+
+////////////////////////////////////////////////////////
+//==> 아래의 의미 확인
+
+
+
+
+
+
+
+
+
+

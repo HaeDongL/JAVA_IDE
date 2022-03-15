@@ -1,0 +1,6 @@
+SELECT
+employee_id »ç¹ø, department_id ºÎ¼­¹øÈ£, salary ¿¬ºÀ, ROUND(AVG(salary),1)ºÎ¼­Æò±Õ¿¬ºÀ
+FROM employees
+WHERE department_id IS NOT NULL
+GROUP BY department_id, employee_id, salary
+ORDER BY ROUND(AVG(salary),1) DESC;

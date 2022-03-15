@@ -1,0 +1,3 @@
+SELECT
+TRUNC(commission_pct,2) Ä¿¹Ì¼Ç,
+FROM employees

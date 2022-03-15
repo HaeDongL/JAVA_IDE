@@ -1,0 +1,3 @@
+SELECT
+TO_CHAR(hire_date,'mm¿ù') ¿ù
+FROM employees;

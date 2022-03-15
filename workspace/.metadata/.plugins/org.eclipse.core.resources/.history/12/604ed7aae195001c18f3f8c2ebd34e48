@@ -1,0 +1,16 @@
+package shop.service.user.impl;
+
+import shop.service.user.Ks;
+
+public class Ksimpl implements Ks {
+
+	public Ksimpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void a() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

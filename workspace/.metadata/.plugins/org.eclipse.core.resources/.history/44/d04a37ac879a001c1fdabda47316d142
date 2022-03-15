@@ -1,0 +1,77 @@
+//=============================================//
+4.WHERE 조건절 :: SQL연산자 IN(일치하는것, 일치하는것,...)
+
+//==> 관리부와 영업부 이름,부서 조회
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE dept_name IN('관리부','영업부')
+ORDER BY dept_name;
+
+==> 아래 비교
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE dept_name = '관리부' OR dept_name = '영업부'
+ORDER BY dept_name;
+
+//==> 관리부와 영업부 제외 이름,부서 조회
+
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE dept_name NOT IN('관리부','영업부')
+ORDER BY dept_name;
+
+
+//=============================================//
+5.WHERE 조건절::SQL연산자 LIKE
+
+//==> _ => 하나		% => 다중
+
+//==> 김씨성을 갖는 이름, 부서 조회
+SELECT
+name 이름, dept_name 부서
+FROM emp_test
+WHERE name LIKE '김%';
+
+//==>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

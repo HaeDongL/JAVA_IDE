@@ -1,0 +1,6 @@
+SELECT
+e.hire_date 년도, AVG(salary) 평균월급
+FROM jobs j, employees e
+WHERE j.job_id = e.job_id
+GROUP BY e.hire_date
+ORDER BY e.hire_date;

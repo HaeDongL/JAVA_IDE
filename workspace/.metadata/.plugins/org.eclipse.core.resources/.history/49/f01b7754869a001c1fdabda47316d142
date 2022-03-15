@@ -1,0 +1,97 @@
+//=============================================//
+#QUERY :: SELECT : WHERE 조건절 연산자 학습
+//=============================================//
+1.WHERE 조건절 :: 연산자
+
+//==> 월급 5000 이상 이름, 월급, 입사일 조회
+SELECT
+name 이름, salary 월급, in_date 입사일
+FROM emp_test
+WHERE salary >= 5000
+ORDER BY salary;
+
+//==> 2004-01-01이후 입사자 이름, 월급, 입사일 조회
+SELECT
+name 이름, salary 월급, in_date 입사일
+FROM emp_test
+WHERE in date >= '2004-01-01'
+ORDER BY int_data;
+
+//==> 이름 이순신666 이상(?) 이름, 월급, 입사일 조회
+SELECT
+name 이름, salary 월급, in_date 입사일
+FROM emp_test
+WHERE in name >= '이순신666'
+ORDER BY name;
+
+==>위의 이해를 돕기위해 아래를 확인
+SELECT name FROM emp_test ORDER BY name;
+
+
+//=============================================//
+
+2.WHERE 조건절::연산자, 논리연산자(NOT,AND,OR)
+
+//==>2004-01-01이후 입사자 이며 월급이 5000이상 이름, 월급, 입사일 조회
+SELECT
+name 이름, salary 울급, in_date 입사일
+FROM emp_test
+WHERE in_date > '2004-01-01; AND salary >= 5000;
+
+//==>2004-01-01이후 입사자 또는 월급이 5000 이상인자 //==> 논리연산자 OR사용
+SELECT
+name 이름, salary 울급, in_date 입사일
+FROM emp_test
+WHERE in_date > '2004-01-01; OR salary >= 5000;
+
+//==>2007-01-01이후 입사자 이며 월급이 5000이상 또는 관리부 직원
+	이름,월급,부서,입사일
+SELECT
+name 이름, salary 울급, in_date 입사일
+FROM emp_test
+WHERE in_date > '2007-01-01; AND salary >= 5000 OR dept_name='관리부';
+
+//==>()우선순위의 이해
+SELECT
+name 이름, salary 울급, in_date 입사일
+FROM emp_test
+WHERE in_date > '2007-01-01; AND (salary >= 5000 OR dept_name='관리부');
+
+
+//=============================================//
+3.WHERE 조건절 :: SQL 연산자 BETWEEN A AND B
+
+//==> 월급이 1000 ~ 2500 사이 이름, 월급, 입사일 조회
+name 이름, salary 월급, in_date 입사일
+FROM emp_test;
+WHERE salary BETWEEN 1000 AND 2500
+ORDER BY salary;
+
+
+//==> 위의 SELECT 비교
+
+//==> 월급이 1000 ~ 2500 사이 이름, 월급, 입사일 조회
+name 이름, salary 월급, in_date 입사일
+FROM emp_test;
+WHERE salary BETWEEN 2500 AND 1000
+ORDER BY salary;
+
+
+//==> 월급이 1000 ~ 2500 사이 제외한 이름, 월급, 입사일 조회
+name 이름, salary 월급, in_date 입사일
+FROM emp_test;
+WHERE salary BETWEEN 1000 AND 2500
+ORDER BY salary;
+
+
+
+
+
+
+
+
+
+
+
+
+

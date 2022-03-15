@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="EUC-KR">
+<title>개인정보 받기</title>
+</head>
+<body>
+	개인정보
+	<hr/>
+	<table border="2">
+		<tr>
+			<td>
+				이름(한글실명)
+			</td>
+			<td>
+				<input type="text" name="name"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				성별
+			</td>
+			<td>
+				<input type="radio" name="gender" id ="man" value="남"/>
+				<label for="man">남</label>
+				<input type="radio" name="gender" id ="weman" value="여"/>
+				<label for="weman">여</label>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				생년월일
+			</td>
+			<td>
+				<input type="text" name="year" style="width:50px"/>년
+				<select name="month">
+					<option value = "0">선택</option>
+							<option value = "1">1</option>
+							<option value = "2">2</option>
+							<option value = "3">3</option>
+							<option value = "4">4</option>
+							<option value = "5">5</option>
+							<option value = "6">6</option>
+							<option value = "7">7</option>
+							<option value = "8">8</option>
+							<option value = "9">9</option>
+							<option value = "10">10</option>
+							<option value = "11">11</option>
+							<option value = "12">12</option>
+				</select>월
+				
+				<select name="day">
+					<option value = "0">선택</option>
+							<option value = "1">1</option>
+							<option value = "2">2</option>
+							<option value = "3">3</option>
+							<option value = "4">4</option>
+							<option value = "5">5</option>
+							<option value = "6">6</option>
+							<option value = "7">7</option>
+							<option value = "8">8</option>
+							<option value = "9">9</option>
+							<option value = "10">10</option>
+							<option value = "11">11</option>
+							<option value = "12">12</option>
+							<option value = "13">13</option>
+							<option value = "14">14</option>
+							<option value = "15">15</option>
+							<option value = "16">16</option>
+							<option value = "17">17</option>
+							<option value = "18">18</option>
+							<option value = "19">19</option>
+							<option value = "20">20</option>
+							<option value = "21">21</option>
+							<option value = "22">22</option>
+							<option value = "23">23</option>
+							<option value = "24">24</option>
+							<option value = "25">25</option>
+							<option value = "26">26</option>
+							<option value = "27">27</option>
+							<option value = "28">28</option>
+							<option value = "29">29</option>
+							<option value = "30">30</option>
+							<option value = "31">31</option>
+				</select>일
+				<input type="radio" name="cal" id="sun" value="양력"/>
+				<label for="sun">양력</label>
+				<input type="radio" name="cal" id="lunar" value="음력"/>
+				<label for="lunar">음력</label>
+				<input type="radio" name="cal" id="Yun"/>
+				<label for="Yun">(윤달)</label>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				최종학력
+			</td>
+			<td>
+				<select name="education" style="width:100px">
+					<option value="초등학교">초등학교</option>
+					<option value="중학교">중학교</option>
+					<option value="고등학교">고등학교</option>
+					<option value="대학교">대학교</option>
+				</select>
+			</td>
+		</tr>
+			
+		<tr>
+			<td>
+				직업
+			</td>
+			<td>
+				<select name="job" style="width:100px">
+					<option value="학생">학생</option>
+					<option value="교사">교사</option>
+					<option value="운동선수">운동선수</option>
+					<option value="백수">백수</option>
+				</select>
+				소속
+				<input type="text" name="group"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				결혼여부
+			</td>
+			<td>
+				<input type="radio" name="merryYn" id="merryY" value="미혼"/>
+				<label for="merryY">미혼</label>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				연락처
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				거주지 주소
+			</td>
+		</tr>
+	</table>	
+</body>
+</html>

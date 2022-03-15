@@ -1,0 +1,5 @@
+SELECT
+CONCAT(TO_CHAR(hire_date,'mm'),'월') 월, COUNT(*)
+FROM employees
+GROUP BY CONCAT(TO_CHAR(hire_date,'mm'),'월')
+ORDER BY CONCAT(TO_CHAR(hire_date,'mm'),'월');

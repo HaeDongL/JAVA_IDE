@@ -1,0 +1,25 @@
+package t03_04;
+
+import java.util.Vector;
+
+public class Prob3 {
+
+	
+	public Vector getList() {
+		
+		return null;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Prob3 e = new Prob3();
+		
+		Vector scores = e.getList();
+		for(int i=0; i<scores.size(); i++) {
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package jp03.par06;
+
+import java.io.*;
+
+
+public class ReadObjectFile {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

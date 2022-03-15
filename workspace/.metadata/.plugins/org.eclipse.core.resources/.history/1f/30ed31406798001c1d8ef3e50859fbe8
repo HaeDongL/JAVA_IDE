@@ -1,0 +1,18 @@
+package jp03.par01;
+
+class Test01{
+	int i = 5;
+}
+
+class Test02 extends Test01{
+	
+}
+
+
+public class Test {
+	public static void main(String[] args) {
+		Test02 t = new Test02();
+		
+		System.out.println(t.i);
+	}
+}

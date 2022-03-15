@@ -1,0 +1,11 @@
+package Test;
+
+public class Example01 {
+
+	public static void main(String[] args) {
+		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+		
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package jp03.par03;
+
+import java.io.*;
+
+/*
+ * FileName : FileInputStreamTest
+ * 
+ */
+
+public class FileInputStreamTest {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

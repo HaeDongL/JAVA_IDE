@@ -1,0 +1,57 @@
+package t03_07;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.Random;
+
+public class Prob02 {
+
+	private static int[] generateRandomNumber() {
+		
+		int[] randomIntArray = new int[10];
+		int random = 0;
+		Random rd = new Random();
+		
+		for(int i=0; i<randomIntArray.length;i++) {
+			random = rd.nextInt(21);
+			for(int j=0; j<randomIntArray.length; j++) {
+				if(random != randomIntArray[j] ) {
+					randomIntArray[i] = random;
+				}
+			}
+					
+		}
+		
+		return randomIntArray;
+		
+	}
+	
+	public static void printStatistics(int[] array) {
+		BufferedReader br = null;
+		int maxNum = 0;
+		int minNUm = 0;
+		double avg = 0.0;
+		String read = "";
+		try {
+			br = new BufferedReader(new FileReader("store.txt"));
+			
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(br == null) {
+				try {br.close();} catch(Exception e) {}
+			}
+		}
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		int[] array = generateRandomNumber();
+		Prob02.printStatistics(array);
+
+	}
+
+}

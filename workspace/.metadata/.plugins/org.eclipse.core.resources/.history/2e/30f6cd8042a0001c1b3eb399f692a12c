@@ -1,0 +1,12 @@
+SELECT
+d.department_name 부서명, e.first_name 이름, e.salary 금여, e.commission_pct 커미션
+FROM employees e, departments d
+WHERE e.department_id = d.department_id
+AND e.commission_pct >= (
+						SELECT
+						e2.commission_pct
+						FROM employees e2, departments d2
+						WHERE e2.department_id = d2.department_id
+						AND e2.commission_pct IS NOT NULL
+						AND rownum <= 4
+						);

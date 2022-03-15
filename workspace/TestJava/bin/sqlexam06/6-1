@@ -1,0 +1,6 @@
+SELECT
+e1.first_name, e1.hire_date, e1.employee_id, e2.first_name
+FROM employees e1, employees e2
+WHERE e1.manager_id = e2.employee_id(+)
+AND e1.hire_date LIKE '8%'
+ORDER BY e2.first_name DESC NULLS LAST;

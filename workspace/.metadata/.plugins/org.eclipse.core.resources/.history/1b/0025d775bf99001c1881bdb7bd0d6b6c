@@ -1,0 +1,38 @@
+//=============================================//
+1.DML::UPDATE:TABLE RECORD 수정
+
+/////////////////////////////////////////////////
+//==> SCOTT id 2 확인
+SELECT*FROM emp_test;
+
+//==> SCOTT id 2 ==> 7변경
+UPDATE emp_test
+SET id = 7
+WHERE name = 'SCOTT';
+
+//==> SCOTT id 2 ==> 7 변경확인
+SELECT*FROM emp_test;
+
+//==>
+ROLLBACK
+//////////////////////////////////////////////////
+//==> SCOTT id 2 ==> 7 로 변경 후 COMMIT
+UPDATE emp_test
+SET id = 7
+WHERE name = 'SCOTT';
+
+SELECT*FROM emp_test;
+
+COMMIT;
+///////////////////////////////////////////////////
+
+//=============================================//
+//==>영업부 ==> rhksflqnfh qusrud
+
+UPDATE emp_test
+SET dept_name = '관리부'
+WHERE dept_name = '영업부';
+
+SELECT*FROM emp_test;
+COMMIT;
+

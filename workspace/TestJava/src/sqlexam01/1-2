@@ -1,0 +1,6 @@
+SELECT
+vt.RANKING, vt.last_name, vt.first_name, vt.salary
+FROM(SELECT
+ RANK()OVER(ORDER BY salary DESC) RANKING, last_name, first_name, salary
+ FROM employees)vt
+WHERE vt.RANKING BETWEEN 5 AND 10;

@@ -1,0 +1,20 @@
+//=============================================//
+#QUERY :: SELECT : WHERE 조건절 연산자 학습
+//=============================================//
+1.WHERE 조건절 :: 연산자
+
+//==> 월급 5000 이상 이름, 월급, 입사일 조회
+SELECT
+name 이름, salary 월급, in_date 입사일
+FROM emp_test
+WHERE salary >= 5000
+ORDER BY salary;
+
+//==> 2004-01-01이후 입사자 이름, 월급, 입사일 조회
+SELECT
+name 이름, salary 월급, in_date 입사일
+FROM emp_test
+WHERE in date >= '2004-01-01'
+ORDER BY int_data;
+
+

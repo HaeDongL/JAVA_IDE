@@ -1,0 +1,27 @@
+package servlet;
+
+	/*
+	 * FileName : DbBean.java
+	 */
+public class DbBean {
+	//Field
+	private String dbulr = "jdbc:oracle:thin:@127.0.0.1:xe";
+	private String dbuser = "scott";
+	private String dbpwd = "tiger";
+	private String id;
+	private String pwd;
+	
+	//Constructor
+	public DbBean() {
+		
+	}
+	//Method
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	
+}

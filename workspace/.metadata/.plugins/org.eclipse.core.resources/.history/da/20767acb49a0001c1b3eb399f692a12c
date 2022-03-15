@@ -1,0 +1,9 @@
+SELECT
+ve.dname 부서명, ve.ename 직원명, ve.es 급여, ve.ecom 커미션
+FROM (SELECT
+	  d.department_name dname, e.first_name ename, e.salary es, e.commission_pct ecom
+	  FROM employees e, departments d
+	  WHERE e.department_id = d.department_id
+	  AND e.commission_pct IS NOT NULL
+	  ORDER BY e.commission_pct DESC) ve
+WHERE rownum <= 4

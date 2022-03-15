@@ -1,0 +1,10 @@
+package jp03.par07;
+
+public class FileInfo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

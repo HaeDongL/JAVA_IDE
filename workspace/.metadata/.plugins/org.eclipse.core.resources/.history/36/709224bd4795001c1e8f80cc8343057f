@@ -1,0 +1,14 @@
+package t02_25;
+
+import java.util.Vector;
+
+public class ArrayCopy {
+	public Vector<String>moveToVector(String[] datas){
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+	
+}

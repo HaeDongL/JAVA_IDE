@@ -1,0 +1,20 @@
+//=============================================//
+1.QUERY :: SELECT : TABLE RECORD 검색, 조회
+//=============================================//
+//==> NULL 처리함수 (?, FUNCTION) 사용
+//==> NULL 인 경우, NULL이 아닌 경우 처리
+//==> NVL(expr1, expr2) :: NOTATION ==> expr(EXPRSSION::산술식)
+//==> expr1 이 NULL인 경우 expr2로 출력
+
+//==> salary가 NULL인 RECORD 확인
+SELECT * FROM emp_test;
+
+SELECT
+name, NVL(salary, 0)
+FROM emp_test;
+
+//=============================================//
+//==> 아래 QUERY 가 ERROR 발생 이유는 ???
+SELECT
+name, NVL(salary, '무급')
+FROM emp_test;

@@ -1,0 +1,17 @@
+package jp03.par05;
+
+import java.io.*;
+
+/*
+ * FileName: FileWriterTestFilter01.java
+ * 
+ */
+
+public class FileWriterTestFilter01 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

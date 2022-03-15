@@ -1,0 +1,4 @@
+SELECT
+NVL(TRUNC(commission_pct,1),'없음') 커미션, COUNT(*) 직원수
+FROM employees
+GROUP BY TRUNC(commission_pct,1);

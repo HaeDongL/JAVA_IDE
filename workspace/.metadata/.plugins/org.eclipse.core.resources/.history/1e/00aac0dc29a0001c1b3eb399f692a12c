@@ -1,0 +1,8 @@
+SELECT
+
+FROM employee e (SELECT
+				 d.department_id, AVG(salary) savg
+				 FROM employees e1, departments d1
+				 WHERE e1.department_id = d1.department_id
+				 GROUP BY d.department_id)
+				 

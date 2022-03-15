@@ -1,0 +1,22 @@
+package servlet;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+
+public class HtmlServlet extends HttpServlet{
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
+		req.setCharacterEncoding("EUC_KR");
+		
+		res.setContentType("text/html;charset=EUC_KR");
+		PrintWriter out = res.getWriter();
+		
+		String clientName = req.getParameter("name");
+		String clientGen = req.getParameter("gender");
+		String clientYear = req.getParameter("year");
+		String clientMonth = req.getParameter("month");
+		
+	}
+	
+}

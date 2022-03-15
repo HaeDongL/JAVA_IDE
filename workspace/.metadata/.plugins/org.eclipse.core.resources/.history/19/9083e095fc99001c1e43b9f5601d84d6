@@ -1,0 +1,42 @@
+package t03_03;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class FileCalculator {
+
+	public void addCalculateResult(String inputFileName) throws Exception {
+		BufferedReader br = new BufferedReader(new FileReader(inputFileName));
+		BufferedWriter wr = new BufferedWriter(new FileWriter(inputFileName,false));
+		String read = br.readLine();
+		int sum = 0;
+		int mp = 1;
+		System.out.println(read);
+		while(true) {
+			read = br.readLine();
+			if(read == null) {
+				wr.write(Integer.toString(sum));
+				wr.newLine();
+				wr.write(Integer.toString(mp));
+				wr.newLine();
+				wr.flush();
+				break;
+			}
+			sum += Integer.parseInt(read);
+			mp *= Integer.parseInt(read);
+			wr.write(read);
+			wr.newLine();
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) throws Exception {
+		FileCalculator fc = new FileCalculator();
+		fc.addCalculateResult("D:\\test.txt");
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package shop.service.user;
+
+public class Client {
+
+	public Client() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

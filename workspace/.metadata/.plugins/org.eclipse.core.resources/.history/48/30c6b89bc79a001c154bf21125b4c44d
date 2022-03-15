@@ -1,0 +1,78 @@
+package t03_04;
+
+import java.util.Vector;
+
+class Score {
+	///Field
+	private String name;
+	private int kor;
+	private int eng;
+	private int math;
+	private int sum;
+	///Constructor
+	public Score() {
+		super();
+	}
+	
+	public Score(String name, int kor, int eng, int math, int sum) {
+		super();
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+		this.sum = sum;
+	}
+	
+	///Method
+	
+	public String getName() {
+		return name;
+	}
+
+	public int getKor() {
+		return kor;
+	}
+
+	public int getEng() {
+		return eng;
+	}
+
+	public int getMath() {
+		return math;
+	}
+
+	public int getSum() {
+		return sum;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setKor(int kor) {
+		this.kor = kor;
+	}
+
+	public void setEng(int eng) {
+		this.eng = eng;
+	}
+
+	public void setMath(int math) {
+		this.math = math;
+	}
+
+	public void setSum(int sum) {
+		this.sum = sum;
+	}
+
+	
+}
+
+public class Prob2 {
+	public static void main(String[] args) {
+		Prob2 p2 = new Prob2();
+		Vector<String> scores = null; //= p2.getScore("src/data.txt");
+		scores.add("1");
+		System.out.println(scores);
+	}
+}

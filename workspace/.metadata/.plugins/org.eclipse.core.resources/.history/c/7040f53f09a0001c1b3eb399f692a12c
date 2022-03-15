@@ -1,0 +1,37 @@
+SELECT
+d.department_name 부서명, MAX(e.salary) 최대급여, MIN(e.salary) 최소급여, TRUNC(AVG(e.salary),0) 평균급여
+FROM employees e, departments d								
+WHERE e.department_id = d.department_id
+GROUP BY d.department_name
+HAVING AVG(e.salary) > (SELECT
+							 AVG(e1.salary)
+							 FROM employees e1, departments d1
+							 WHERE e1.department_id = d1.department_id
+							 AND d1.department_name = 'IT')
+AND AVG(e.salary) < (SELECT
+							 AVG(e2.salary)
+							 FROM employees e2, departments d2
+							 WHERE e2.department_id = d2.department_id
+							 AND d2.department_name = 'Sales');
+
+
+// Sales 부서도 같이출력되는 문제가 아직 남음.
+
+select
+d.department_name 부서명, max(e.salary) 최대급여, min(e.salary) 최소급여, avg(e.salary) 평균급여
+from employees e, departments d 
+where e.department_id = d.department_id
+group by d.department_name
+having avg(e.salary) > (select 
+                     avg(salary)
+                     from employees e1, departments d1
+                     where e1.department_id = d1.department_id
+                     and department_name='IT')
+and avg(e.salary) < (select avg(salary)
+                  from employees e2, departments d2
+                  where e2.department_id = d2.department_id
+                  and department_name='Sales');
+                  
+                  
+                  
+                  

@@ -1,0 +1,45 @@
+package jp03.par04;
+
+import java.io.*;
+
+/*
+ * FileName: BufferedReaderTest.java
+ * 1.read()Method 보다 효율적인 method를 제공하는 class 사용
+ * 2.Sink stream : Data를 직접 주고 받는 단순입출력 Stream
+ *   Filter stream : Sink Stream을 통해 들어온 Data 조작하는 Stream
+ *   차이 이해
+ */
+public class BufferedReaderTest {
+
+	//main method
+	public static void main(String[] args)throws Exception {
+		//read 수 count 위한 변수
+		int readCount=0;
+		
+		//SinkStream ==> 추가적인 기능을 제공
+		FileReader fr = new FileReader(args[0]);
+		//FileterStream ==> 추가적인 기능을 제공
+		BufferedReader br = new BufferedReader(fr);
+
+		//==> 위의 두 line과 아래를 비교하자.
+		//BufferedReader br = new BufferedReader(new FileReader(args[0]));
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

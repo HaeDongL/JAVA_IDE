@@ -1,0 +1,12 @@
+package jp03.par03;
+
+
+import java.io.*;
+public class FileReaderTest {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

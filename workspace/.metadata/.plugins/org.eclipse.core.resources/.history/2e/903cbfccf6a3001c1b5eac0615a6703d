@@ -1,0 +1,10 @@
+package servlet;
+
+/*
+ * FileName: UserInitParamDao
+ * ::특정DBMS에 종속적이지 않은 DAO
+ */
+
+public class UserInitParamDao {
+
+}

@@ -1,0 +1,17 @@
+package jdbcexam;
+
+public class EmpManager04 {
+	
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}

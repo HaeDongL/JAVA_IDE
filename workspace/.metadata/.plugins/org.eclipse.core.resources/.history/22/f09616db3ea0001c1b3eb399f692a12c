@@ -1,0 +1,12 @@
+SELECT
+d.department_name 부서명, e.first_name 직원명, e.salary 급여, e.commission_pct 커미션
+FROM employees e, departments d, (SELECT
+								  d1.department_id, RANK() OVER(ORDER BY e1.commission_pct DESC) cr, e1.commission_pct vec
+								  FROM employees e1, departments d1
+								  WHERE e1.department_id = d1.department_id
+								  AND commission_pct IS NOT NULL) ve
+WHERE e.department_id = d.department_id
+AND d.department_id = ve.department_id
+AND ve.cr >= 4 
+GROUP BY d.department_name
+ORDER BY e.commission_pct;

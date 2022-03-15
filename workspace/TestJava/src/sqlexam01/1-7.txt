@@ -1,0 +1,6 @@
+SELECT
+j.job_title 직책, AVG(e.salary) 평균급여
+FROM employees e, jobs j
+WHERE e.job_id = j.job_id
+GROUP BY j.job_title
+HAVING AVG(e.salary) >= 2000;

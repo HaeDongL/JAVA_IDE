@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="EUC-KR">
+<title>개인정보 받기</title>
+</head>
+<body>
+	개인정보
+	<table border="2">
+		<tr>
+			<td>
+				이름(한글실명)
+			</td>
+			<td>
+				<input type="text" name="name"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				성별
+			</td>
+			<td>
+				<input type="radio" name="gender" id ="gender" value="남"/>
+				<label for="gender">남</label>
+				<input type="radio" name="gender" id ="gender" value="여"/>
+				<label for="gender">여</label>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				생년월일
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				최종학력
+			</td>
+		</tr>
+			
+		<tr>
+			<td>
+				직업
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				결혼여부
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				연락처
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				거주지 주소
+			</td>
+		</tr>
+	</table>	
+</body>
+</html>

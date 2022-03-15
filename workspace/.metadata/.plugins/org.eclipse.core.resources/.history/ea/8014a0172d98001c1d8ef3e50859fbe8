@@ -1,0 +1,5 @@
+package jp04.part01;
+
+public class AfterThreadRunnable {
+
+}

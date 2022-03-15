@@ -1,0 +1,8 @@
+package servlet;
+
+	/*
+	 * FileName : DbBean.java
+	 */
+public class DbBean {
+	
+}

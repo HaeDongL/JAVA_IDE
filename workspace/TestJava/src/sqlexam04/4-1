@@ -1,0 +1,10 @@
+SELECT
+j.job_title, SUM(e.salary)
+FROM employees e, jobs j
+WHERE e.job_id = j.job_id
+GROUP BY j.job_title
+HAVING SUM(e.salary) > 30000
+ORDER BY SUM(e.salary) DESC;
+
+
+

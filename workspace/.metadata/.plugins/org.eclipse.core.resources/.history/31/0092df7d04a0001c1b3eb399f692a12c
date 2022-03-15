@@ -1,0 +1,4 @@
+SELECT
+CONCAT(TO_CHAR(hire_date,'mm'),'¿ù') ¿ù, COUNT(*)
+FROM employees
+GROUP BY ¿ù;

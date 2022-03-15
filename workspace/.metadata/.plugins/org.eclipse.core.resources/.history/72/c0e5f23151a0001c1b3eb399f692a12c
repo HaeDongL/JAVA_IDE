@@ -1,0 +1,24 @@
+package jdbcexam;
+
+public class EmpStatistics {
+
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

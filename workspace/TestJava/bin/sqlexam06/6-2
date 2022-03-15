@@ -1,0 +1,11 @@
+SELECT
+e.first_name, e.salary, d.department_name
+FROM employees e, departments d, (SELECT
+								 AVG(e1.salary) ves, d1.department_id
+								 FROM employees e1, departments d1
+								 WHERE e1.department_id = d1.department_id
+								 AND d1.department_id = 100
+								 GROUP BY d1.department_id ) ve
+WHERE e.department_id = d.department_id
+AND d.department_name = 'Sales'
+AND e.salary < ve.ves;

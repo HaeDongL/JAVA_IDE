@@ -1,0 +1,20 @@
+package servlet;
+
+/*
+ * FileName : UserPoolDao.java
+ * ::JDBC 절차 중 Connection 인스턴스 생성 및 관리 전담하는 Connection Pool 사용
+ */
+
+public class UserPoolDao {
+	
+	//Field
+	//String dburl="jdbc:oracle:thin:@127.0.0.1:1521:xe";
+	//String dbuser="scott";
+	//String dbpwd = "tiger";
+	
+	//Constructor
+	public UserPoolDao() {
+		
+	}
+	
+}

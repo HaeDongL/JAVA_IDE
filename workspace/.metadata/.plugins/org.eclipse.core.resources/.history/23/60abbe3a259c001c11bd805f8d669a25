@@ -1,0 +1,11 @@
+package t03_07;
+
+public class Prob03 {
+
+	public static void main(String[] args) {
+		//고객(유저)정보를 갖는 FileName 선언
+		String pathName = "./src/data.txt";
+		
+	}
+
+}

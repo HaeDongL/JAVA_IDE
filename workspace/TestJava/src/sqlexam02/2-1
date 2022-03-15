@@ -1,0 +1,5 @@
+SELECT
+e.employee_id 사번, e.first_name 이름, e.last_name 성, NVL(d.department_name,'<NOT ASSINGNED>') 부서명 
+FROM employees e, departments d
+WHERE e.department_id = d.department_id
+AND e.hire_date LIKE '99%';

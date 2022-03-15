@@ -1,0 +1,21 @@
+package jp03.par05;
+
+import java.io.*;
+
+/*
+ * FileName: FileWriterTestFilter01.java
+ * 
+ * ==>FileCopy하는 Application 작성
+ * 1.Keyboard로 FileName을 입력
+ * 2.File의 내용을 read() ==> FileReader
+ * 3.File로 내용을 write()==>FileWriter
+ */
+
+public class FileWriterTestFilter01 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

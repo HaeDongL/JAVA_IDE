@@ -1,0 +1,10 @@
+package jp03.par06;
+
+public class WriteObjectFile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,15 @@
+SELECT
+d.department_name 부서명, MAX(e.salary) 최대급여, MIN(e.salary) 최소급여, TRUNC(AVG(e.salary),0) 평균급여
+FROM employees e, departments d								
+WHERE e.department_id = d.department_id
+HAVING TRUNC(AVG(e.salary),0) > (SELECT
+							 AVG(e1.salary)
+							 FROM employees e1, departments d1
+							 WHERE e1.department_id = d1.department_id
+							 AND d1.department_name = 'IT')
+AND TRUNC(AVG(e.salary),0) < (SELECT
+							 AVG(e1.salary)
+							 FROM employees e1, departments d1
+							 WHERE e1.department_id = d1.department_id
+							 AND d1.department_name = 'Sales')
+GROUP BY d.department_name;

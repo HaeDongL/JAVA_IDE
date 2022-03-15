@@ -1,0 +1,3 @@
+SELECT
+d.department_name NAME, j.min_salary minsal, j.max_salary maxsal AVG(e.salary) avgsal
+FROM employees e, departments d, jobs j
