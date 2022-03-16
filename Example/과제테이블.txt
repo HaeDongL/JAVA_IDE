@@ -1,0 +1,15 @@
+CREATE TABLE privacy(
+name VARCHAR2(10),
+gender VARCHAR2(10),
+birth VARCHAR2(10),
+cal VARCHAR2(10),
+edu VARCHAR2(10),
+job VARCHAR2(10),
+groups VARCHAR2(10),
+marriage VARCHAR2(10),
+children VARCHAR2(10),
+tel VARCHAR2(10),
+cellphone VARCHAR2(10),
+telecom VARCHAR2(10),
+addr VARCHAR2(10)
+);
