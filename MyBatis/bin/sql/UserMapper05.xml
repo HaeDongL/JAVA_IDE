@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--	
+	UserMapper.xml :: SQL 를 갖는 MetaData 
+ -->		
+<mapper namespace="UserMapper05">
+
+	<!--  INSERT 매핑구분(insert SQL 등록):: insert element
+		1. dynamic SQL(?) 사용처리 :: 추후 학습..  -->
+	<insert id="addUser" parameterType="user">
+	INSERT
+	INTO users(user_id, user_name, password, age, grade, reg_date)
+	VALUES( #{userId},
+			#{userName},
+			#{password},
+			#{age:INTEGER},
+			<if test="grade==0">null</if>
+			<if test="grade!=0">#{grade}</if>,
+			#{regDate:DATE})
+	</insert>
+  	
+  	<!--  SELECT 매핑구문(select SQL 등록) :: select element -->
+  	<select 	id="getUser01" 	parameterType="string" 	resultType="user">
+		SELECT
+		user_id 			AS userId,
+		user_name 	AS userName,
+		password 		AS password,
+		age 					AS age,
+		grade				AS grade,
+		reg_date 		AS regDate
+		FROM users  
+		WHERE user_id = #{value} 											
+  	</select>
+  	
+	<!--  명시적 결과 맵 사용 :: 명시적 선언을 통해 정확성, 인라인보다 성능향상 -->  
+	<!--  SELECT 매핑구문에서 사용할 ResultSet과 바인딩될 비지니스 객체 명시적 정의 -->
+	<resultMap id="userSelectMap" type="user">
+		<result property="userId" column="user_id" jdbcType="VARCHAR"/>
+		<result property="userName" column="user_name" jdbcType="VARCHAR"/>
+		<result property="password" column="password" jdbcType="VARCHAR"/>
+		<result property="age" column="age" jdbcType="INTEGER"/>
+		<result property="grade" column="grade" jdbcType="NUMERIC"/>
+		<result property="regDate" column="reg_date" jdbcType="DATE"/>
+	</resultMap>	
+	
+	<!--  SELECT매핑 구문(selectSQL 등록)::select element
+		resultMap(외부결과 맵) 사용
+		:query 결과가 resultMap선언된 column / property Binding -->
+  	<select 	id="getUser02" 	parameterType="string" 	resultMap="userSelectMap">
+		SELECT
+		user_id, user_name, password, age, grade, reg_date
+		FROM users 
+		WHERE user_id = #{value}										
+  	</select>
+  	
+  	<!--  SELECT매핑 구문(selectSQL 등록)::select element -->
+  	<select id="getUserList" 	resultMap="userSelectMap">
+		SELECT
+		user_id, user_name, password, age, grade, reg_date
+		FROM users 
+  	</select>
+  	
+  	<!--  DELETE매핑 구문(deleteSQL 등록)::delete element -->
+  	<delete id="removeUser" 	parameterType="java.lang.String">
+		DELETE
+		FROM users 
+		WHERE user_id = #{value}
+  	</delete>
+  	
+</mapper>

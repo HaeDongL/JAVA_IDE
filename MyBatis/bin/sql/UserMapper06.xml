@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--	
+	UserMapper.xml :: SQL 를 갖는 MetaData 
+ -->		
+<mapper namespace="UserMapper06">
+
+	<!--  SELECT 매핑구문에서 사용할 ResultSet과 바인딩될 비지니스 객체 명시적 정의 -->
+	<resultMap id="userSelectMap" type="user">
+		<result property="userId" column="user_id" jdbcType="VARCHAR"/>
+		<result property="userName" column="user_name" jdbcType="VARCHAR"/>
+		<result property="password" column="password" jdbcType="VARCHAR"/>
+		<result property="age" column="age" jdbcType="INTEGER"/>
+		<result property="grade" column="grade" jdbcType="NUMERIC"/>
+		<result property="regDate" column="reg_date" jdbcType="DATE"/>
+	</resultMap>	
+
+	<!--  SELECT매핑 구문(selectSQL 등록)::select element
+		resultMap(외부결과 맵) 사용
+		:query 결과가 resultMap선언된 column / property Binding 
+  	<select 	id="getUser02" 	parameterType="user" 	resultType="userSelectMap">
+		SELECT
+		user_id, user_name, password, age, grade, reg_date
+		FROM users 
+		1. 조건 WHERE user_id = #{value}										
+  	</select>
+  		2. 다른 조건 WHERE user_name = ${userName}
+  		3. 다른 조건 WHERE user_id = #{value} AND user_name = ${userName}
+  		4. 조건이 없다면
+  		==> 다양한 조건의 Query/<select> 필요하다면?
+  		-->
+  		
+  		<!-- dynamic SQL::
+  			다양한 조건의 Query 필요한 경우 SQL 구문이 기하급수적으로 늘어남
+  			동적 SQL을 사용 매핑구문을 재사용, 정적 SQL 다수 작성을 피한다.  -->
+  	<select id="getUserList01" parameterType="user"	resultMap="userSelectMap">
+		SELECT
+		user_id, user_name, password, age, grade, reg_date
+		FROM users 
+		<!-- <where> element
+			: Contents 추가 되면 WHERE 추가, Contents가 없으면 무시(?)
+			: SQL구성시 WHERE 다음 Contents가 AND?OR로 시작하면 무시(?) -->
+		<where>
+			<if test="userName != null">
+				user_name = #{userName}
+			</if>
+			<if test="age != null">
+				AND age = #{age}
+			</if>
+		</where>
+		ORDER BY user_id DESC
+  	</select>
+  	
+  	
+  	<!-- DYNAMIC SELECT 매핑구문(select SQL 등록) :: select element -->
+  	<select 	id="getUserList02" 	parameterType="user" 	resultMap="userSelectMap">
+		SELECT
+		user_id, user_name, password, age, grade, reg_date
+		FROM users
+		<where>
+			<if test="grade != 0">
+				grade = #{grade}
+			</if>
+			<if test="grade == 0">
+				 grade IS NULL
+			</if>
+			<if test="age != null">
+				OR age = #{age}
+			</if>
+			<if test="age == null">
+				OR age IS NULL
+			</if>
+			<if test="age == null and regDate==null">
+				OR reg_date IS NULL
+			</if>
+		</where>
+		ORDER BY user_id DESC								
+  	</select>
+  	
+	<!--  INSERT 매핑구분(insert SQL 등록):: insert element -->
+	<insert id="addUser" parameterType="user">
+	INSERT
+	INTO users (user_id, user_name, password, age, grade, reg_date)
+	VALUES(  #{userId},
+			#{userName},
+			#{password},
+			#{age:INTEGER},
+			<if test="grade==0">null</if>
+			<if test="grade!=0">#{grade}</if>,
+			#{regDate:DATE})
+	</insert>
+	
+  	
+  	
+  	
+  	<!--  DELETE매핑 구문(deleteSQL 등록)::delete element -->
+  	<delete id="removeUser" 	parameterType="java.lang.String">
+		DELETE
+		FROM users 
+		WHERE user_id = #{value}
+  	</delete>
+  	
+</mapper>
